@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-o", "${workspaceFolder}/bin/main.exe",
+          "${workspaceFolder}/src/main.c",
+          "${workspaceFolder}/glad/src/glad.c",
+          "-I${workspaceFolder}/include",
+          "-I${workspaceFolder}/glad/include",
+          "-I${workspaceFolder}/glfw/include",
+          "-L${workspaceFolder}/lib",
+          "-lglfw3",
+          "-lopengl32",
+          "-lgdi32"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Сборка проекта с использованием GCC"
+      }
+    ]
+  }
